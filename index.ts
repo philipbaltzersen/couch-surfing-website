@@ -1,3 +1,3 @@
-let age = 100
-let firstName = "Philip"
-let busy = true
+let age: number = 100
+let firstName: string = "Philip"
+let busy: boolean = true
