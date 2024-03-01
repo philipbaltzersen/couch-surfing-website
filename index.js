@@ -19,11 +19,7 @@ var reviews = [
         date: "27-03-2021"
     },
 ];
-function showReviewsTotal(value) {
-    reviewTotalDisplay.innerHTML = "Review total " + value.toString();
+function showReviewsTotal(value, user) {
+    reviewTotalDisplay.innerHTML = "Review total: " + value.toString() + " | last reviewed by " + user;
 }
-function showLastUser(user) {
-    reviewTotalDisplay.innerHTML += " " + user;
-}
-showReviewsTotal(reviews.length);
-showLastUser(reviews[2]["name"]);
+showReviewsTotal(reviews.length, reviews[0].name);

@@ -22,14 +22,8 @@ const reviews = [
 ]
 
 
-function showReviewsTotal(value: number) {
-    reviewTotalDisplay.innerHTML = "Review total " + value.toString() 
+function showReviewsTotal(value: number, user: string) {
+    reviewTotalDisplay.innerHTML = "Review total: " + value.toString() + " | last reviewed by " + user
 }
 
-function showLastUser(user: string) {
-    reviewTotalDisplay.innerHTML += " " + user
-}
-
-showReviewsTotal(reviews.length)
-
-showLastUser(reviews[2]["name"])
+showReviewsTotal(reviews.length, reviews[0].name)
