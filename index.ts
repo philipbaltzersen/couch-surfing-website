@@ -22,8 +22,12 @@ const reviews = [
 ]
 
 
-function showReviewsTotal(value: number, user: string) {
+function showReviewsTotal(value: number, user: string, loyaltyUser: boolean) {
     reviewTotalDisplay.innerHTML = "Review total: " + value.toString() + " | last reviewed by " + user
+
+    if (loyaltyUser) {
+        reviewTotalDisplay.innerHTML += " ⭐️"
+    }
 }
 
-showReviewsTotal(reviews.length, reviews[0].name)
+showReviewsTotal(reviews.length, reviews[0].name, reviews[0].loyaltyUser)
