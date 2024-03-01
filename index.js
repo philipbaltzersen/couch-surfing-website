@@ -1,5 +1,4 @@
 var reviewTotalDisplay = document.querySelector("#reviews");
-var recentReviewer = document.querySelector("#user");
 var reviews = [
     {
         name: "Sheia",
@@ -21,10 +20,10 @@ var reviews = [
     },
 ];
 function showReviewsTotal(value) {
-    reviewTotalDisplay.innerHTML = value.toString();
+    reviewTotalDisplay.innerHTML = "Review total " + value.toString();
 }
 function showLastUser(user) {
-    recentReviewer.innerHTML = user;
+    reviewTotalDisplay.innerHTML += " " + user;
 }
 showReviewsTotal(reviews.length);
 showLastUser(reviews[2]["name"]);

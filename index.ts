@@ -1,5 +1,4 @@
 const reviewTotalDisplay = document.querySelector("#reviews")
-const recentReviewer = document.querySelector("#user")
 
 const reviews = [
     {
@@ -24,11 +23,11 @@ const reviews = [
 
 
 function showReviewsTotal(value: number) {
-    reviewTotalDisplay.innerHTML = value.toString() 
+    reviewTotalDisplay.innerHTML = "Review total " + value.toString() 
 }
 
 function showLastUser(user: string) {
-    recentReviewer.innerHTML = user
+    reviewTotalDisplay.innerHTML += " " + user
 }
 
 showReviewsTotal(reviews.length)
