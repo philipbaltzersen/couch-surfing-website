@@ -20,9 +20,7 @@ var reviews = [
     },
 ];
 function showReviewsTotal(value, user, loyaltyUser) {
-    reviewTotalDisplay.innerHTML = "Review total: " + value.toString() + " | last reviewed by " + user;
-    if (loyaltyUser) {
-        reviewTotalDisplay.innerHTML += " ⭐️";
-    }
+    var iconDisplay = loyaltyUser ? "⭐️" : "";
+    reviewTotalDisplay.innerHTML = "Review total: " + value.toString() + " | last reviewed by " + user + " " + iconDisplay;
 }
 showReviewsTotal(reviews.length, reviews[0].name, reviews[0].loyaltyUser);
