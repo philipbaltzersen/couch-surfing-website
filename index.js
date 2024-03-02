@@ -26,7 +26,8 @@ var you = {
         firstName: "Philip",
         lastName: "Holm"
     },
-    isReturning: true
+    isReturning: true,
+    stayedAt: ["home", "eirik-flat", "espen-bungalow"]
 };
 function showReviewsTotal(value, user, loyaltyUser) {
     var iconDisplay = loyaltyUser ? "⭐️" : "";

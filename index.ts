@@ -30,6 +30,7 @@ type User = {
         lastName: string;
     },
     isReturning: boolean;
+    stayedAt: string[];
 }
 
 const you: User = {
@@ -37,7 +38,8 @@ const you: User = {
         firstName: "Philip",
         lastName: "Holm"
     },
-    isReturning: true
+    isReturning: true,
+    stayedAt: ["home", "eirik-flat", "espen-bungalow"]
 }
 
 function showReviewsTotal(value: number, user: string, loyaltyUser: boolean) {
