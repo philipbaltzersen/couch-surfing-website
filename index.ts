@@ -24,7 +24,15 @@ const reviews = [
 ]
 
 
-const you = {
+type User = {
+    userName: {
+        firstName: string;
+        lastName: string;
+    },
+    isReturning: boolean;
+}
+
+const you: User = {
     userName: {
         firstName: "Philip",
         lastName: "Holm"
