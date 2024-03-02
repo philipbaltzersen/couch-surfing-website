@@ -7,6 +7,29 @@ type Review = {
     date: Date;
 }
 
+type User = {
+    userName: {
+        firstName: string;
+        lastName: string;
+    },
+    isReturning: boolean;
+    stayedAt: string[];
+}
+
+type Property = {
+    image: string;
+    title: string;
+    pricePerNight: number;
+    location: {
+        firstLine: string;
+        city: string;
+        code: number;
+        country: string;
+    };
+    email: string;
+    isAvailable: boolean;
+}
+
 const reviews: Review[] = [
     {
         name: "Sheia",
@@ -28,16 +51,6 @@ const reviews: Review[] = [
     },
 ]
 
-
-type User = {
-    userName: {
-        firstName: string;
-        lastName: string;
-    },
-    isReturning: boolean;
-    stayedAt: string[];
-}
-
 const you: User = {
     userName: {
         firstName: "Philip",
@@ -46,6 +59,48 @@ const you: User = {
     isReturning: true,
     stayedAt: ["home", "eirik-flat", "espen-bungalow"]
 }
+
+const properties: Property[] = [
+    {
+        image: "",
+        title: "Colombian Shack",
+        pricePerNight: 45,
+        location: {
+            firstLine: "Shack 37",
+            city: "Botoga",
+            code: 41231,
+            country: "Colombia"
+        },
+        email: "shack@email.com",
+        isAvailable: true
+    },
+    {
+        image: "",
+        title: "Polish Cottage",
+        pricePerNight: 34,
+        location: {
+            firstLine: "no 23",
+            city: "Gdansk",
+            code: 343903,
+            country: "Poland"
+        },
+        email: "garydavis@hotmail.com",
+        isAvailable: false 
+    },
+    {
+        image: "",
+        title: "London Flat",
+        pricePerNight: 23,
+        location: {
+            firstLine: "flat 15",
+            city: "London",
+            code: 35433,
+            country: "United Kingdom",
+        },
+        email: "andyluger@aol.com",
+        isAvailable: true
+    }
+]
 
 showReviewsTotal(reviews.length, reviews[0].name, reviews[0].loyaltyUser)
 
