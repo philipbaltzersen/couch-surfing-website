@@ -1,6 +1,6 @@
-var returningUserDisplay = document.querySelector("#returning-user");
-var userNameDisplay = document.querySelector("#user");
-var reviewTotalDisplay = document.querySelector("#reviews");
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var utils_1 = require("./utils");
 var reviews = [
     {
         name: "Sheia",
@@ -29,15 +29,5 @@ var you = {
     isReturning: true,
     stayedAt: ["home", "eirik-flat", "espen-bungalow"]
 };
-function showReviewsTotal(value, user, loyaltyUser) {
-    var iconDisplay = loyaltyUser ? "⭐️" : "";
-    reviewTotalDisplay.innerHTML = "Review total: " + value.toString() + " | last reviewed by " + user + " " + iconDisplay;
-}
-function populateUser(isReturning, userName) {
-    if (isReturning) {
-        returningUserDisplay.innerHTML = "back";
-    }
-    userNameDisplay.innerHTML = userName;
-}
-showReviewsTotal(reviews.length, reviews[0].name, reviews[0].loyaltyUser);
-populateUser(you.isReturning, you.userName.firstName);
+(0, utils_1.showReviewsTotal)(reviews.length, reviews[0].name, reviews[0].loyaltyUser);
+(0, utils_1.populateUser)(you.isReturning, you.userName.firstName);

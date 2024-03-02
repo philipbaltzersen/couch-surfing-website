@@ -1,6 +1,4 @@
-const returningUserDisplay = document.querySelector("#returning-user")
-const userNameDisplay = document.querySelector("#user")
-const reviewTotalDisplay = document.querySelector("#reviews")
+import { showReviewsTotal, populateUser } from "./utils";
 
 type Review = {
     name: string;
@@ -48,19 +46,6 @@ const you: User = {
     isReturning: true,
     stayedAt: ["home", "eirik-flat", "espen-bungalow"]
 }
-
-function showReviewsTotal(value: number, user: string, loyaltyUser: boolean) {
-    const iconDisplay = loyaltyUser ? "⭐️" : ""
-    reviewTotalDisplay.innerHTML = "Review total: " + value.toString() + " | last reviewed by " + user + " " + iconDisplay
-}
-
-function populateUser(isReturning: boolean, userName: string) {
-    if (isReturning) {
-        returningUserDisplay.innerHTML = "back"
-    }
-    userNameDisplay.innerHTML = userName
-}
-
 
 showReviewsTotal(reviews.length, reviews[0].name, reviews[0].loyaltyUser)
 
