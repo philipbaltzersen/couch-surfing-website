@@ -2,24 +2,31 @@ const returningUserDisplay = document.querySelector("#returning-user")
 const userNameDisplay = document.querySelector("#user")
 const reviewTotalDisplay = document.querySelector("#reviews")
 
-const reviews = [
+type Review = {
+    name: string;
+    stars: number;
+    loyaltyUser: boolean;
+    date: Date;
+}
+
+const reviews: Review[] = [
     {
         name: "Sheia",
         stars: 5,
         loyaltyUser: true,
-        date: "01-04-2021"
+        date: new Date(2021, 4, 1)
     },
     {
         name: "Andrzej",
         stars: 3,
         loyaltyUser: false,
-        date: "28-03-2021"
+        date: new Date(2021, 3, 28)
     },
     {
         name: "Omar",
         stars: 4,
         loyaltyUser: true,
-        date: "27-03-2021"
+        date: new Date(2021, 3, 27)
     },
 ]
 
